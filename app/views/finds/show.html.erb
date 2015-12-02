@@ -1,0 +1,13 @@
+Search Result
+<%= link_to "Back", new_find_path %>
+
+<% if @find.find_product.empty? %>
+    No Records Found
+<% else %>
+<% @find.find_product.each do |f| %>
+
+    <%= f.name %>
+    <p>Category: <%= f.category %></p>
+    <p></p>Price: <%= f.price %></p>
+    <% end %>
+<% end %>

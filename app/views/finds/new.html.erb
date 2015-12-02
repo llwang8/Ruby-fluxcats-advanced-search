@@ -1,0 +1,12 @@
+<%= form_fo @find, html: {class: "form"} do |f| %>
+
+<%= f.label :key %>
+<%= f.text_field :key %>
+
+<%= f.label :cat %>
+<%= f.select :cat, options_for_select(@categories), :include_blank => true %>
+
+<%= f.submit "Submit" %>
+<% end %>
+
+<%= link_to "Back", products_path %>
