@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'home/index'
+
+  resources :books
   resources :products
   resources :finds, :only => [:new, :show]
   # The priority is based upon order of creation: first created -> highest priority.
